@@ -1,0 +1,18 @@
+# training
+n_epochs: 50
+batch_size: 32
+num_workers: 0
+grad_clip: 100.  # 梯度裁剪程度，可调
+loss_scale: 1.0
+
+
+# resume training
+resume: false
+resume_path: ""
+debug: false
+
+use_augmentation: true
+
+defaults:
+    - optimizer@optimizer: adam_w.yaml
+    - scheduler@scheduler: cosine_annealing.yaml

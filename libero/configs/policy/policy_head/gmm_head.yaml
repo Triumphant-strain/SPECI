@@ -1,0 +1,14 @@
+network: GMMHead
+
+network_kwargs:
+    hidden_size: 1024
+    num_layers: 2
+    min_std: 0.0001
+    num_modes: 5
+    low_eval_noise: false
+    activation: "softplus"
+
+loss_kwargs:
+    loss_coef: 1.0  # 1.0
+    att_sparsity_loss_coef: 1e-1  # 1e-2
+    codebook_normalize_loss_coef: 1e-2
